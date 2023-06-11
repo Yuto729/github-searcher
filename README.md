@@ -22,7 +22,7 @@
 1. Clone or download this repository.
 
     ```
-    git clone https://github.com/Yuto729/repository-search.git
+    git clone https://github.com/Yuto729/github-searcher.git
     cd github-searcher
     ```
 
