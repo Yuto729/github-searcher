@@ -1,8 +1,11 @@
+// Import necessary libraries and modules
 import { useState } from 'react';
 import { useRouter } from 'next/router'
 import axios from 'axios';
 import React  from "react";
 import styles from "../styles/Home.module.css";
+
+// Define TypeScript interfaces for repository data and form props
 interface Repository {
     id: number;
     name: string;
@@ -12,15 +15,20 @@ interface Repository {
 interface SearchFormProps {
   onSearch: (repositories: Repository[]) => void;
 }
+
+// Define the SearchForm functional component
 const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
+  // Define the SearchForm functional component
   const [username, setUsername] = useState("");
   const [keyword, setKeyword] = useState("");
+
+  // Initialize the router for navigation
   const router = useRouter();
 
-
+// Define the function for searching repositories
   const searchRepositories = async () => {
     if (!username || !keyword) {
-        //usernameかkeywordが入力されないときは、APIリクエストを送らない
+        // If username or keyword is empty, do not send the API request
         return;
     }
     try {
@@ -28,6 +36,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
     onSearch(response.data);
     }
     catch (error) {
+        // Handle Axios errors
         if (axios.isAxiosError(error)) {
             if (error.response && error.response.status === 500) {
                 // Redirect to /500 page if the error was a 500 error
@@ -47,6 +56,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   }
 };
 
+  // Render the form
   return (
     <div className={styles.form}>
       <input

@@ -1,81 +1,101 @@
+/* The container class */
 .container {
-    margin: 0 auto;
-    padding: 0 20px;
-    
-  }
-  
-  .title {
-    margin: 20px 0;
-    color: #333;
-    text-align: center;
-    font-size: 3.5em;
-    font-weight: 400;
-  }
-  
-  .card {
-    margin: 1em 0;
-    border: 1px solid #ffffff;
-    border-radius: 0px;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-bottom: 2px solid black;
-  }
-  
-  .card a {
-    color: #1a0dab;
-    text-decoration: none;
-  }
-  
-  .card a:hover,
-  .card a:focus,
-  .card a:active {
-    text-decoration: underline;
-  }
-  
-  .card h2 {
-    margin: 0 0 0.5em 0;
-    font-size: 1.2em;
-  }
-  
-  .card p {
-    margin: 0;
-    color: #4d5156;
-  }
-  
-  .card .url {
-    color: #048bde;
-    font-size: 0.9em;
-  }
-  
-  
-  .main {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  
-  .form input {
-    border: 2px solid #9f9f9f;
-    margin-left: 50px;
-    margin-right: 0px;
-    background-color: #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .form button {
-    margin-left: 20px;
-    background-color: #3090e5; /* 水色 */
-    color: #ffffff; /* 文字色：黒 */
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 15px; /* 丸みを帯びたボーダー */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* 影を追加 */
-  }
+/* Main section class */
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+/* Titles */
+.title {
+  margin: 20px 0;
+  font-size: 3.5em;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Card styles */
+.card {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #ffffff;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  margin: 0;
+  color: #4d5156;
+}
+
+.card .url {
+  color: #048bde;
+  font-size: 0.9em;
+}
+
+.card a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.card a:hover,
+.card a:focus,
+.card a:active {
+  text-decoration: underline;
+}
+
+/* Form styles */
+.form input {
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  border: 2px solid #9f9f9f;
+  background-color: #ffffff;
+}
+
+.form button {
+  margin-left: 20px;
+  padding: 0.5em 1em;
+  background-color: #3090e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Error page */
+.errorPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.errorPage h1 {
+  font-size: 3em;
+}
+
+.errorPage p {
+  font-size: 2em;
+}

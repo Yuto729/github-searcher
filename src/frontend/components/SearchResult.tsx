@@ -1,5 +1,8 @@
+// Import necessary libraries and modules
 import styles from '../styles/Home.module.css';
 import React from "react";
+
+// Define TypeScript interface for repository data and search results props
 interface Repository {
     id: number;
     name: string;
@@ -10,6 +13,7 @@ interface SearchResultProps {
   repositories: Repository[];
 }
 
+// Define the SearchResult functional component
 const SearchResult: React.FC<SearchResultProps> = ({ repositories }) => {
   return (
     <div className={styles.grid}>
