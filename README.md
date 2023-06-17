@@ -13,9 +13,10 @@
 ## Environment Setup
 
 ### Prerequisites
-
-- Node.js v14.x or later installed
-- Python 3.8 or later installed
+- Windows 11 Home 22H2
+- Node.js v18.16.0 
+- Python 3.11.064
+- pip 23.1.1
 
 ### Setup Steps
 
@@ -31,6 +32,7 @@
     Frontend:
 
     ```
+    cd src
     cd frontend
     npm install
     ```
@@ -38,6 +40,7 @@
     Backend:
 
     ```
+    cd src
     cd backend
     pip install -r requirements.txt
     ```
@@ -47,6 +50,7 @@
     Frontend:
 
     ```
+    cd src
     cd frontend
     npm run dev
     ```
@@ -54,6 +58,7 @@
     Backend:
 
     ```
+    cd src
     cd backend
     uvicorn main:app --reload
     ```
@@ -68,9 +73,6 @@ Now, the frontend can be accessed at `http://localhost:3000`, and the backend at
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-## License
-
-This project is licensed under the terms of the MIT license. See the `LICENSE` file for details.
 
 ## Contact
 
